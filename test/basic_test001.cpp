@@ -13,9 +13,9 @@ TEST(Basic_tests, TestEq_2_2) {
 }
 
 TEST(Basic_tests, TestNe_2_1) {
-    EXPECT_EQ(2, 1);
+    EXPECT_NE(2, 1);
 }
 
 TEST(Basic_tests, TestNe_1_2) {
-    EXPECT_EQ(1, 2);
+    EXPECT_NE(1, 2);
 }
