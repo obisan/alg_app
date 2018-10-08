@@ -1,4 +1,4 @@
-set(SRC_TESTS basic_test001.cpp testFicture.h tools.h)
+set(SRC_TESTS basic_test001.cpp)
 
 add_executable(alg_app_tests_run ${SRC_TESTS})
 
