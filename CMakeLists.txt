@@ -7,6 +7,7 @@ add_subdirectory(test)
 add_subdirectory(lib/googletest)
 
 include_directories(lib/googletest/googletest/include)
+include_directories(lib/googletest/googlemock/include)
 
 set(SRC_FILES src/main.cpp)
 
