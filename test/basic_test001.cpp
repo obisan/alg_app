@@ -29,7 +29,7 @@ TEST(Basic_tests, TestBubble_sort) {
             -11, -6, -2, 1, 2, 3, 4, 5, 6, 7
             ));
 }
- /*
+
 TEST(Basic_tests, TestSelection_sort) {
     std::vector<int> v = { 2, -11, -6, 5, 6, 7, 1, -2, 3, 4};
     selection_sort(v);
@@ -38,6 +38,8 @@ TEST(Basic_tests, TestSelection_sort) {
             -11, -6, -2, 1, 2, 3, 4, 5, 6, 7
     ));
 }
+
+/*
 
 TEST(Basic_tests, TestInsertion_sort) {
     std::vector<int> v = { 2, -11, -6, 5, 6, 7, 1, -2, 3, 4};
