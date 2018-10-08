@@ -139,6 +139,8 @@ void merge_sort(int* a, int lb, int rb) {
         merge_sort(a, split + 1, rb);
         merge(a, lb, split, rb);
     }
+
+    return;
 }
 
 void merge(int* a, int lb, int split, int rb) {
