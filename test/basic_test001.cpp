@@ -39,8 +39,6 @@ TEST(Basic_tests, TestSelection_sort) {
     ));
 }
 
-/*
-
 TEST(Basic_tests, TestInsertion_sort) {
     std::vector<int> v = { 2, -11, -6, 5, 6, 7, 1, -2, 3, 4};
     insertion_sort(v);
@@ -50,6 +48,7 @@ TEST(Basic_tests, TestInsertion_sort) {
     ));
 }
 
+/*
 TEST(Basic_tests, TestMerge_sort) {
     std::vector<int> v = { 2, -11, -6, 5, 6, 7, 1, -2, 3, 4};
     merge_sort(v);
