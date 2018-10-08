@@ -4,10 +4,7 @@
 
 #include <gtest/gtest.h>
 #include <gmock/gmock.h>
-#include <memory>
 #include "../src/algoritms.h"
-#include "testFicture.h"
-#include "tools.h"
 
 TEST(Basic_tests, TestEq_1_1) {
     EXPECT_EQ(1, 1);
@@ -26,33 +23,36 @@ TEST(Basic_tests, TestNe_1_2) {
 }
 
 TEST(Basic_tests, TestBubble_sort) {
-    std::unique_ptr<testFicture> p(new testFicture());
-    bubble_sort(p.get()->getV());
-
-    EXPECT_TRUE(ArraysMatch<std::vector<int>>(
-            p.get()->getV(), p.get()->getR(), p.get()->size()));
+    std::vector<int> v = { 2, -11, -6, 5, 6, 7, 1, -2, 3, 4};
+    bubble_sort(v);
+    ASSERT_THAT(v, ::testing::ElementsAre(
+            -11, -6, -2, 1, 2, 3, 4, 5, 6, 7
+            ));
 }
 
 TEST(Basic_tests, TestSelection_sort) {
-    std::unique_ptr<testFicture> p(new testFicture());
-    selection_sort(p.get()->getV());
+    std::vector<int> v = { 2, -11, -6, 5, 6, 7, 1, -2, 3, 4};
+    selection_sort(v);
 
-    EXPECT_TRUE(ArraysMatch<std::vector<int>>(
-            p.get()->getV(), p.get()->getR(), p.get()->size()));
+    ASSERT_THAT(v, ::testing::ElementsAre(
+            -11, -6, -2, 1, 2, 3, 4, 5, 6, 7
+    ));
 }
 
 TEST(Basic_tests, TestInsertion_sort) {
-    std::unique_ptr<testFicture> p(new testFicture());
-    insertion_sort(p.get()->getV());
+    std::vector<int> v = { 2, -11, -6, 5, 6, 7, 1, -2, 3, 4};
+    insertion_sort(v);
 
-    EXPECT_TRUE(ArraysMatch<std::vector<int>>(
-            p.get()->getV(), p.get()->getR(), p.get()->size()));
+    ASSERT_THAT(v, ::testing::ElementsAre(
+            -11, -6, -2, 1, 2, 3, 4, 5, 6, 7
+    ));
 }
 
 TEST(Basic_tests, TestMerge_sort) {
-    std::unique_ptr<testFicture> p(new testFicture());
-    merge_sort(p.get()->getV());
-    
-    EXPECT_TRUE(ArraysMatch<std::vector<int>>(
-            p.get()->getV(), p.get()->getR(), p.get()->size()));
+    std::vector<int> v = { 2, -11, -6, 5, 6, 7, 1, -2, 3, 4};
+    merge_sort(v);
+
+    ASSERT_THAT(v, ::testing::ElementsAre(
+            -11, -6, -2, 1, 2, 3, 4, 5, 6, 7
+    ));
 }
