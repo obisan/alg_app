@@ -162,6 +162,7 @@ void merge(int* a, int lb, int split, int rb) {
         a[lb + i] = b[i];
     }
 
+    delete[] b;
 }
 
 
