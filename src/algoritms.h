@@ -127,13 +127,13 @@ void insertion_sort(std::vector<int>& a) {
 }
 
 void merge_sort(std::vector<int>& v) {
-    merge_sort(&v[0], 0, v.size());
+    merge_sort(&v[0], 0, v.size() - 1);
 }
 
 void merge_sort(int* a, int lb, int rb) {
     int split;
 
-    if(lb <= rb) {
+    if(lb < rb) {
         split = (rb + lb) / 2;
         merge_sort(a, lb, split);
         merge_sort(a, split + 1, rb);
@@ -151,12 +151,12 @@ void merge(int* a, int lb, int split, int rb) {
     int *b = new int[n];
 
     while(p1 <= split && p2 <= rb) {
-        if(a[p1] < a[p2]) 	b[p3++] = a[p1++];
-        else 				b[p3++] = a[p2++];
+        if(a[p1] < a[p2]) 	{ b[p3] = a[p1]; p3++; p1++; }
+        else 				{ b[p3] = a[p2]; p3++; p2++;}
     }
 
-    while(p1 <= split) 	b[p3++] = a[p1++];
-    while(p2 <= rb) 	b[p3++] = a[p2++];
+    while(p1 <= split) 	{ b[p3] = a[p1]; p3++; p1++; }
+    while(p2 <= rb) 	{ b[p3] = a[p2]; p3++; p2++; }
 
     for(int i = 0; i < n; i++) {
         a[lb + i] = b[i];
