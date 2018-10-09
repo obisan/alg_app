@@ -61,5 +61,5 @@ TEST(Basic_tests, TestBinary_search) {
     std::vector<int> v = { 2, -11, -6, 5, 6, 7, 1, -2, 3, 4};
     merge_sort(v);
 
-    EXPECT_EQ(7, binary_search(v, 6));
+    EXPECT_EQ(7, binary_search(v, 5));
 }
